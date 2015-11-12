@@ -1,0 +1,21 @@
+{
+    "name": "kondrat/DesignPatterns",
+    "description": "OOP design patterns examples",
+    "license": "MIT",
+    "keywords": ["design patterns", "oop"],
+    "authors": [
+        {
+            "name": "Andrey Kondratovets",
+            "email": "kondratovets.andrey@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "5.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kondrat\\DesignPatterns\\": "src"
+        }
+    }
+}
