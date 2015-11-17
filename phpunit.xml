@@ -10,8 +10,11 @@
          stopOnFailure="false"
          syntaxCheck="false">
     <testsuites>
-        <testsuite name="Pattern Strategy tests">
+        <testsuite name="Strategy">
             <directory suffix=".php">./tests/Strategy</directory>
+        </testsuite>
+        <testsuite name="Observer">
+            <directory suffix=".php">./tests/Observer</directory>
         </testsuite>
     </testsuites>
 </phpunit>
