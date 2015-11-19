@@ -25,7 +25,7 @@ class StarbuzzCoffee
         return $beverage->getDescription() . ": $" . $beverage->cost();
     }
 
-    public function getHouseBlendtWithMochaSoyAndWhip()
+    public function getHouseBlendWithMochaSoyAndWhip()
     {
         $beverage = new HouseBlend();
         $beverage = new Mocha($beverage);

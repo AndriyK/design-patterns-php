@@ -16,5 +16,8 @@
         <testsuite name="Observer">
             <directory suffix=".php">./tests/Observer</directory>
         </testsuite>
+        <testsuite name="Decorator">
+            <directory suffix=".php">./tests/Decorator</directory>
+        </testsuite>
     </testsuites>
 </phpunit>
