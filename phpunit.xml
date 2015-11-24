@@ -19,6 +19,9 @@
         <testsuite name="Decorator">
             <directory suffix=".php">./tests/Decorator</directory>
         </testsuite>
+        <testsuite name="Factory">
+            <directory suffix=".php">./tests/Factory</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
