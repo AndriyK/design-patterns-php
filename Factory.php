@@ -6,6 +6,9 @@ use \Kondrat\DesignPatterns\Factory\SimpleFactory\PizzaStore;
 use \Kondrat\DesignPatterns\Factory\SimpleFactory\SimplePizzaFactory;
 
 // factory method
+use \Kondrat\DesignPatterns\Factory\FactoryMethod\NewYorkStore\NYStylePizzaStore;
+use \Kondrat\DesignPatterns\Factory\FactoryMethod\ChicagoStore\ChicagoStylePizzaStore;
+use \Kondrat\DesignPatterns\Factory\FactoryMethod\AbstractPizzaStore;
 
 // abstract factory
 
@@ -20,6 +23,12 @@ echo "\n";
 
 echo "\n";
 echo "********* Factory Method ************ \n";
+$NYStore = new NYStylePizzaStore();
+echo $NYStore->orderPizza(AbstractPizzaStore::PIZZA_CLAM);
+echo "\n";
+$ChicagoStore = new ChicagoStylePizzaStore();
+echo $ChicagoStore->orderPizza(AbstractPizzaStore::PIZZA_PEPPERONI);
+echo "\n";
 
 echo "\n";
 echo "********* Abstract Factory ************ \n";
