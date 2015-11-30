@@ -1,13 +1,13 @@
 <?php
 namespace Kondrat\DesignPatterns\Factory\AbstractFactory\Pizza;
 
-class CheesePizza extends  AbstractPizza
+class VeggiePizza extends  AbstractPizza
 {
     public function prepare()
     {
         $this->dough = $this->ingredientFactory->createDough();
         $this->sauce = $this->ingredientFactory->createSauce();
-        $this->cheese = $this->ingredientFactory->createCheese();
+        $this->veggies = $this->ingredientFactory->createVeggies();
 
         $res = "Preparing {$this->getName()} pizza...\n";
 

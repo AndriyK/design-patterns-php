@@ -5,6 +5,7 @@ use Kondrat\DesignPatterns\Factory\AbstractFactory\Ingredient\FrozenClams;
 use Kondrat\DesignPatterns\Factory\AbstractFactory\Ingredient\MozzarellaCheese;
 use Kondrat\DesignPatterns\Factory\AbstractFactory\Ingredient\PlumTomatoSauce;
 use Kondrat\DesignPatterns\Factory\AbstractFactory\Ingredient\ThickCrustDough;
+use Kondrat\DesignPatterns\Factory\AbstractFactory\Ingredient\SlicedPepperoni;
 
 class ChicagoPizzaIngredientFactory implements PizzaIngredientFactoryInterface
 {
