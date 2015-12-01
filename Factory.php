@@ -1,34 +1,33 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
-// simple factory
-use \Kondrat\DesignPatterns\Factory\SimpleFactory\PizzaStore;
-use \Kondrat\DesignPatterns\Factory\SimpleFactory\SimplePizzaFactory;
+use \Kondrat\DesignPatterns\Factory\SimpleFactory as SF;
+use \Kondrat\DesignPatterns\Factory\FactoryMethod as FM;
+use \Kondrat\DesignPatterns\Factory\AbstractFactory as AF;
 
-// factory method
-use \Kondrat\DesignPatterns\Factory\FactoryMethod\NewYorkStore\NYStylePizzaStore;
-use \Kondrat\DesignPatterns\Factory\FactoryMethod\ChicagoStore\ChicagoStylePizzaStore;
-use \Kondrat\DesignPatterns\Factory\FactoryMethod\AbstractPizzaStore;
-
-// abstract factory
 
 echo "<pre>";
 
 echo "********* Simple Factory ************ \n";
-$store = new PizzaStore( new SimplePizzaFactory() );
-echo $store->orderPizza(PizzaStore::PIZZA_PEPPERONI);
+$store = new SF\PizzaStore( new SF\SimplePizzaFactory() );
+echo $store->orderPizza(SF\PizzaStore::PIZZA_PEPPERONI);
 echo "\n";
-echo $store->orderPizza(PizzaStore::PIZZA_VEGGIE);
+echo $store->orderPizza(SF\PizzaStore::PIZZA_VEGGIE);
 echo "\n";
 
 echo "\n";
 echo "********* Factory Method ************ \n";
-$NYStore = new NYStylePizzaStore();
-echo $NYStore->orderPizza(AbstractPizzaStore::PIZZA_CLAM);
+$NYStore = new FM\NewYorkStore\NYStylePizzaStore();
+echo $NYStore->orderPizza(FM\AbstractPizzaStore::PIZZA_CLAM);
 echo "\n";
-$ChicagoStore = new ChicagoStylePizzaStore();
-echo $ChicagoStore->orderPizza(AbstractPizzaStore::PIZZA_PEPPERONI);
+$ChicagoStore = new FM\ChicagoStore\ChicagoStylePizzaStore();
+echo $ChicagoStore->orderPizza(FM\AbstractPizzaStore::PIZZA_PEPPERONI);
 echo "\n";
 
 echo "\n";
 echo "********* Abstract Factory ************ \n";
+$NYStore = new AF\NYPizzaStore();
+echo $NYStore->orderPizza(AF\AbstractPizzaStore::PIZZA_CLAM);
+echo "\n";
+$ChicagoStore = new AF\ChicagoPizzaStore();
+echo $ChicagoStore->orderPizza(AF\AbstractPizzaStore::PIZZA_CLAM);

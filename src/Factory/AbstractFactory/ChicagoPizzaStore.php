@@ -15,24 +15,24 @@ class ChicagoPizzaStore extends AbstractPizzaStore
 
         if ($type == self::PIZZA_CLAM) {
             $pizza = new ClamPizza($ingFactory);
-            $pizza->setName("Chicago Style Clam Pizza");
+            $pizza->setName("Chicago Style Clam");
             return $pizza;
         }
 
         if ($type == self::PIZZA_PEPPERONI) {
             $pizza = new PepperoniPizza($ingFactory);
-            $pizza->setName("Chicago Style Pepperoni Pizza");
+            $pizza->setName("Chicago Style Pepperoni");
             return $pizza;
         }
 
         if ($type == self::PIZZA_VEGGIE) {
             $pizza = new VeggiePizza($ingFactory);
-            $pizza->setName("Chicago Style Veggie Pizza");
+            $pizza->setName("Chicago Style Veggie");
             return $pizza;
         }
 
         $pizza = new CheesePizza($ingFactory);
-        $pizza->setName("Chicago Style Cheese Pizza");
+        $pizza->setName("Chicago Style Cheese");
         return $pizza;
     }
 }

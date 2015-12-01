@@ -49,9 +49,11 @@ abstract class AbstractPizza
 
     public function __toString()
     {
-        $str = implode("\n", [$this->dough, $this->sauce, $this->cheese, $this->pepperoni, $this->clam]);
+        $ing = array_filter([$this->dough, $this->sauce, $this->cheese, $this->pepperoni, $this->clam]);
+
+        $str = implode("\n", $ing);
         $veggie = implode(', ', $this->veggies);
-        $str .= empty($veggie) ? "" : "\n {$veggie}";
+        $str .= empty($veggie) ? "" : "\n{$veggie}";
 
         return $str;
     }

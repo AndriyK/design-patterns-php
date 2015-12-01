@@ -15,24 +15,24 @@ class NYPizzaStore extends AbstractPizzaStore
 
         if ($type == self::PIZZA_CLAM) {
             $pizza = new ClamPizza($ingFactory);
-            $pizza->setName("NY Style Clam Pizza");
+            $pizza->setName("NY Style Clam");
             return $pizza;
         }
 
         if ($type == self::PIZZA_PEPPERONI) {
             $pizza = new PepperoniPizza($ingFactory);
-            $pizza->setName("NY Style Pepperoni Pizza");
+            $pizza->setName("NY Style Pepperoni");
             return $pizza;
         }
 
         if ($type == self::PIZZA_VEGGIE) {
             $pizza = new VeggiePizza($ingFactory);
-            $pizza->setName("NY Style Veggie Pizza");
+            $pizza->setName("NY Style Veggie");
             return $pizza;
         }
 
         $pizza = new CheesePizza($ingFactory);
-        $pizza->setName("NY Style Cheese Pizza");
+        $pizza->setName("NY Style Cheese");
         return $pizza;
     }
 }
