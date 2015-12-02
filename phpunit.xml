@@ -22,6 +22,9 @@
         <testsuite name="Factory">
             <directory suffix=".php">./tests/Factory</directory>
         </testsuite>
+        <testsuite name="Singleton">
+            <directory suffix=".php">./tests/Singleton</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
