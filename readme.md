@@ -6,11 +6,11 @@ Every pattern's related code lives in correspondent folder, like "Strategy", "Ob
 In "examples" folder are located "root" pattern's file with correspondent name, like "Strategy.php", there are code that demostrates pattern's work.
 
 At the moment following patterns were implemented:
-1. Strategy
-2. Observer
-3. Decorator
-4. Factory
-5. Singleton
+ 1. Strategy
+ 2. Observer
+ 3. Decorator
+ 4. Factory
+ 5. Singleton
 
 So, after installation of package (with composer install) to web server document root, just hit needed pattern file,
 something like that:
