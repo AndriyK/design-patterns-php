@@ -24,6 +24,6 @@ class CeilingFanOffCommand implements CommandInterface
 
     public function undo()
     {
-        return '';
+        return $this->fan->high();
     }
 }

@@ -24,6 +24,9 @@ class StereoOffCommand implements CommandInterface
 
     public function undo()
     {
-        return '';
+        $res = $this->stereo->on();
+        $res .= $this->stereo->setCd();
+        $res .= $this->stereo->setVolume(10);
+        return $res;
     }
 }

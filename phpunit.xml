@@ -25,6 +25,9 @@
         <testsuite name="Singleton">
             <directory suffix=".php">./tests/Singleton</directory>
         </testsuite>
+        <testsuite name="Command">
+            <directory suffix=".php">./tests/Command</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">

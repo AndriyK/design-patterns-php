@@ -27,6 +27,6 @@ class StereoOnWithCdCommand implements CommandInterface
 
     public function undo()
     {
-        return '';
+        return $this->stereo->off();
     }
 }

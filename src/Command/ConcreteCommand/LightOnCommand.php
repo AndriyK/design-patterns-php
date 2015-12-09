@@ -24,6 +24,6 @@ class LightOnCommand implements CommandInterface
 
     public function undo()
     {
-        return '';
+        return $this->light->off();
     }
 }

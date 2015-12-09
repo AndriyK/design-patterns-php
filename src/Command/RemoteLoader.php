@@ -5,6 +5,7 @@ use Kondrat\DesignPatterns\Command\ConcreteCommand\CeilingFanOnCommand;
 use Kondrat\DesignPatterns\Command\ConcreteCommand\GarageDoorUpCommand;
 use Kondrat\DesignPatterns\Command\ConcreteCommand\LightOffCommand;
 use Kondrat\DesignPatterns\Command\ConcreteCommand\LightOnCommand;
+use Kondrat\DesignPatterns\Command\ConcreteCommand\MacroCommand;
 use Kondrat\DesignPatterns\Command\ConcreteCommand\StereoOnWithCdCommand;
 use Kondrat\DesignPatterns\Command\Receiver\CeilingFan;
 use Kondrat\DesignPatterns\Command\Receiver\GarageDoor;
@@ -43,6 +44,11 @@ class RemoteLoader
         $remoteControl->setCommand(2, $ceilingFanOn, $ceilingFanOff);
         $remoteControl->setCommand(3, $garageDoorUp, $garageDoorDown);
         $remoteControl->setCommand(4, $stereoOnWithCd, $stereoOff);
+
+        // macro command
+        $partyOn = [$livingRoomLightOn, $stereoOnWithCd];
+        $partyOff = [$livingRoomLightOff, $stereoOff];
+        $remoteControl->setCommand(5, new MacroCommand($partyOn), new MacroCommand($partyOff));
 
         return $remoteControl;
     }

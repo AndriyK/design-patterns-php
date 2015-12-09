@@ -24,6 +24,6 @@ class GarageDoorDownCommand implements CommandInterface
 
     public function undo()
     {
-        return '';
+        return $this->garageDoor->up();
     }
 }
