@@ -5,12 +5,12 @@ class NoCommand implements CommandInterface
 {
     public function execute()
     {
-        return __CLASS__ . ': no effect';
+        return "No execution effect.\n";
     }
 
     public function undo()
     {
-        return __CLASS__ . ': nothing to undo';
+        return "Nothing to undo.\n";
     }
 
     public function __toString()

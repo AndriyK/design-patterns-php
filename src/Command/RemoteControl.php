@@ -42,7 +42,7 @@ class RemoteControl
 
     public function undoButtonPushed()
     {
-        $this->undoCommand->undo();
+        return $this->undoCommand->undo();
     }
     
     public function __toString()

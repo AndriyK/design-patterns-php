@@ -2,11 +2,14 @@
 namespace Kondrat\DesignPatterns\Command;
 
 use Kondrat\DesignPatterns\Command\ConcreteCommand\CeilingFanOnCommand;
+use Kondrat\DesignPatterns\Command\ConcreteCommand\CeilingFanOffCommand;
 use Kondrat\DesignPatterns\Command\ConcreteCommand\GarageDoorUpCommand;
+use Kondrat\DesignPatterns\Command\ConcreteCommand\GarageDoorDownCommand;
 use Kondrat\DesignPatterns\Command\ConcreteCommand\LightOffCommand;
 use Kondrat\DesignPatterns\Command\ConcreteCommand\LightOnCommand;
 use Kondrat\DesignPatterns\Command\ConcreteCommand\MacroCommand;
 use Kondrat\DesignPatterns\Command\ConcreteCommand\StereoOnWithCdCommand;
+use Kondrat\DesignPatterns\Command\ConcreteCommand\StereoOffCommand;
 use Kondrat\DesignPatterns\Command\Receiver\CeilingFan;
 use Kondrat\DesignPatterns\Command\Receiver\GarageDoor;
 use Kondrat\DesignPatterns\Command\Receiver\Light;
