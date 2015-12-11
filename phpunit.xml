@@ -28,6 +28,9 @@
         <testsuite name="Command">
             <directory suffix=".php">./tests/Command</directory>
         </testsuite>
+        <testsuite name="Adapter">
+            <directory suffix=".php">./tests/Adapter</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
