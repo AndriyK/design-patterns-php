@@ -11,7 +11,8 @@ At the moment following patterns were implemented:
  3. Decorator
  4. Factory
  5. Singleton
- 5. Command
+ 6. Command
+ 7. Adapter
 
 So, after installation of package (with composer install) to web server document root, just hit needed pattern file,
 something like that:
