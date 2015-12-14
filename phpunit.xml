@@ -31,6 +31,9 @@
         <testsuite name="Adapter">
             <directory suffix=".php">./tests/Adapter</directory>
         </testsuite>
+        <testsuite name="Facade">
+            <directory suffix=".php">./tests/Facade</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
