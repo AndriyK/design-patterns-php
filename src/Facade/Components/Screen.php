@@ -3,18 +3,15 @@ namespace Kondrat\DesignPatterns\Facade\Components;
 
 class Screen
 {
-    public function on()
+    private $name = "Screen";
+
+    public function down()
     {
-        return __CLASS__ . " on.\n";
+        return "{$this->name} going down.\n";
     }
 
-    public function wideScreenMode()
+    public function up()
     {
-        return __CLASS__ . " in widescreen mode (16x9).\n";
-    }
-
-    public function off()
-    {
-        return __CLASS__ . " off.\n";
+        return "{$this->name} going up.\n";
     }
 }

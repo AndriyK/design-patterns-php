@@ -3,28 +3,30 @@ namespace Kondrat\DesignPatterns\Facade\Components;
 
 class Amplifier
 {
+    private $name = 'Amplifier';
+
     public function on()
     {
-        return __CLASS__ . " on.\n";
+        return "{$this->name} on.\n";
     }
 
     public function setDvd(DvdPlayer $d)
     {
-        return __CLASS__ . " setting " . get_class($d) . " to Top-o-Line\n";
+        return "{$this->name} setting " . get_class($d) . " to Top-o-Line\n";
     }
 
     public function setSurroundSound()
     {
-        return __CLASS__ . " surround sound on (5 speakers, 1 sub)\n";
+        return "{$this->name} surround sound on (5 speakers, 1 sub)\n";
     }
 
     public function setVolume($level)
     {
-        return __CLASS__ . " setting volume to $level\n";
+        return "{$this->name} setting volume to $level\n";
     }
 
     public function off()
     {
-        return __CLASS__ . " off.\n";
+        return "{$this->name} off.\n";
     }
 }

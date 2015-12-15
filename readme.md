@@ -13,6 +13,7 @@ At the moment following patterns were implemented:
  5. Singleton
  6. Command
  7. Adapter
+ 8. Facade
 
 So, after installation of package (with composer install) to web server document root, just hit needed pattern file,
 something like that:

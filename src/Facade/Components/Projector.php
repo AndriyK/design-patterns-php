@@ -3,13 +3,21 @@ namespace Kondrat\DesignPatterns\Facade\Components;
 
 class Projector
 {
-    public function down()
+    private $name = "Projector";
+
+    public function on()
     {
-        return __CLASS__ . " going down.\n";
+        return "{$this->name} on.\n";
     }
 
-    public function up()
+    public function wideScreenMode()
     {
-        return __CLASS__ . " going up.\n";
+        return "{$this->name} in widescreen mode (16x9).\n";
     }
+
+    public function off()
+    {
+        return "{$this->name} off.\n";
+    }
+
 }
