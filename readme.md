@@ -14,6 +14,7 @@ At the moment following patterns were implemented:
  6. Command
  7. Adapter
  8. Facade
+ 9. Template Method
 
 So, after installation of package (with composer install) to web server document root, just hit needed pattern file,
 something like that:

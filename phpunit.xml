@@ -34,6 +34,9 @@
         <testsuite name="Facade">
             <directory suffix=".php">./tests/Facade</directory>
         </testsuite>
+        <testsuite name="TemplateMethod">
+            <directory suffix=".php">./tests/TemplateMethod</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
