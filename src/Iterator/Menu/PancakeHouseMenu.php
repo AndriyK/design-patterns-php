@@ -4,7 +4,7 @@ namespace Kondrat\DesignPatterns\Iterator\Menu;
 use Kondrat\DesignPatterns\Iterator\ArrayList;
 use Kondrat\DesignPatterns\Iterator\ConcreteIterator\PancakeHouseMenuIterator;
 
-class PancakeHouseMenu
+class PancakeHouseMenu implements MenuInterface
 {
     private $menuItems;
 

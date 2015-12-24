@@ -3,7 +3,7 @@ namespace Kondrat\DesignPatterns\Iterator\Menu;
 
 use Kondrat\DesignPatterns\Iterator\ConcreteIterator\DinerMenuIterator;
 
-class DinerMenu
+class DinerMenu implements MenuInterface
 {
     const MAX_ITEMS = 3;
 

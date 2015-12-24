@@ -1,5 +1,5 @@
 <?php
-namespace Kondrat\DesignPatterns\Iterator\ConcreteIterator;
+namespace Kondrat\DesignPatterns\Iterator\Menu;
 
 class MenuItem
 {

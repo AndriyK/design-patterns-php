@@ -3,7 +3,7 @@ namespace Kondrat\DesignPatterns\Iterator\ConcreteIterator;
 
 class DinerMenuIterator implements IteratorInterface
 {
-    private $items = array();
+    protected $items = array();
     private $position = 0;
 
     public function __construct(Array $menuItems)
@@ -13,14 +13,14 @@ class DinerMenuIterator implements IteratorInterface
     
     public function next()
     {
-        $item = $this->menuItems[$this->position];
+        $item = $this->items[$this->position];
         $this->position++;
         return $item;
     }
 
     public function hasNext()
     {
-        if($this->position >= count($this->menuItems)){
+        if($this->position >= count($this->items)){
             return false;
         }
         return true;

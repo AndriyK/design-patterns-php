@@ -15,7 +15,7 @@ class PancakeHouseMenuIterator implements IteratorInterface
 
     public function next()
     {
-        $item = $this->items->get([$this->position]);
+        $item = $this->items->get($this->position);
         $this->position++;
         return $item;
     }

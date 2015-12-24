@@ -37,6 +37,9 @@
         <testsuite name="TemplateMethod">
             <directory suffix=".php">./tests/TemplateMethod</directory>
         </testsuite>
+        <testsuite name="Iterator">
+            <directory suffix=".php">./tests/Iterator</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
