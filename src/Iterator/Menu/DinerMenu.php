@@ -5,8 +5,6 @@ use Kondrat\DesignPatterns\Iterator\ConcreteIterator\DinerMenuIterator;
 
 class DinerMenu implements MenuInterface
 {
-    const MAX_ITEMS = 3;
-
     private $numberOfItems = 0;
     private $menuItems = array();
 
@@ -19,10 +17,6 @@ class DinerMenu implements MenuInterface
 
     private function addItem($name, $description, $vegeterian, $price)
     {
-        if($this->numberOfItems > self::MAX_ITEMS){
-            throw new Exception('Too many menu items');
-        }
-
         $this->menuItems[$this->numberOfItems++] = new MenuItem($name, $description, $vegeterian, $price);
     }
 

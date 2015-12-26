@@ -36,7 +36,7 @@ class Waitress
         $res = "";
         while($iterator->hasNext()) {
             $item = $iterator->next();
-            $res .= $item->getName() + ", " + $item->getPrice() + " -- " + $item->getDescription();
+            $res .= $item->getName() . ", " . $item->getPrice() . " -- " . $item->getDescription() . "\n";
         }
         return $res;
     }
