@@ -90,4 +90,13 @@ class GumballMachine
     {
         return $this->state;
     }
+
+    public function __toString()
+    {
+        $str = "**** Gumball machine #001 ****\n";
+        $str .= "Inventory: " . $this->getCount() ." gumballs\n";
+        $str .= "Status: " . get_class($this->getState()) . "\n";
+
+        return $str;
+    }
 }

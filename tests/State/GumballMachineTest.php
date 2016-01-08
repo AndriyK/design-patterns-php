@@ -80,4 +80,13 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     {
         $this->assertInstanceOf('Kondrat\DesignPatterns\State\ConcreteState\WinnerState', $this->machine->getWinnerState());
     }
+
+    public function testToString()
+    {
+        $str = "**** Gumball machine #001 ****\n";
+        $str .= "Inventory: 5 gumballs\n";
+        $str .= 'Status: Kondrat\DesignPatterns\State\ConcreteState\NoQuarterState'."\n";
+
+        $this->assertEquals($str, strval($this->machine));
+    }
 }

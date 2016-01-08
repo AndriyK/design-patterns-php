@@ -39,7 +39,9 @@ class HasQuarterState implements StateInterface
 
     public function isWinner()
     {
+        //@codeCoverageIgnoreStart
         return (rand(0,9) == 0 and $this->machine->getCount()>0);
+        //@codeCoverageIgnoreEnd
     }
 
 
