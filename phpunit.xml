@@ -43,6 +43,9 @@
         <testsuite name="State">
             <directory suffix=".php">./tests/State</directory>
         </testsuite>
+        <testsuite name="Proxy">
+            <directory suffix=".php">./tests/Proxy</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
