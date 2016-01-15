@@ -17,7 +17,7 @@ At the moment following patterns were implemented:
  9. Template Method
  10. Iterator
  11. State
- 12. Proxy (not a book)
+ 12. Proxy (not a book, just imagined one)
 
 So, after installation of package (with composer install) to web server document root, just hit needed pattern file,
 something like that:
