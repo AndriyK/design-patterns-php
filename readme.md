@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/AndriyK/design-patterns-php.svg?branch=master)](https://travis-ci.org/AndriyK/design-patterns-php)
+
 ## Examples of OOP design pattern implemented on PHP
 
 Package contains design patterns examples from book "Head First Design Patterns" by Eric Freeman and Elisabeth Freeman, implemented on PHP.
