@@ -2,25 +2,45 @@
 namespace Kondrat\DesignPatterns\CompoundPatterns;
 
 use Kondrat\DesignPatterns\CompoundPatterns\Duck;
+use Kondrat\DesignPatterns\CompoundPatterns\Factory\AbstractDuckFactory;
+use Kondrat\DesignPatterns\CompoundPatterns\Factory\AbstractGooseFactory;
 use Kondrat\DesignPatterns\CompoundPatterns\Goose;
 
 class DuckSimulator
 {
-    public function simulate()
+    public function simulate(AbstractDuckFactory $duckFactory, AbstractGooseFactory $gooseFactory)
     {
-        $mallardDuck = new QuackCounter( new Duck\MallardDuck() );
-        $redheadDuck = new QuackCounter( new Duck\RedheadDuck() );
-        $duckCall = new QuackCounter( new Duck\DuckCall() );
-        $rubberDuck = new QuackCounter( new Duck\RubberDuck() );
-        $gooseDuck = new Goose\GooseAdapter( new Goose\Goose() );
+        $redheadDuck = $duckFactory->createRedheadDuck();
+        $duckCall = $duckFactory->createDuckCall();
+        $rubberDuck = $duckFactory->createRubberDuck();
+        $gooseDuck = $gooseFactory->createGoose();
 
-        echo "**** Duck Simulator ****\n";
+        echo "**** Duck Simulator - with composite flocks ****\n";
 
-        $this->_simulate($mallardDuck);
-        $this->_simulate($redheadDuck);
-        $this->_simulate($duckCall);
-        $this->_simulate($rubberDuck);
-        $this->_simulate($gooseDuck);
+        $flockOfDucks = new Flock();
+        $flockOfDucks->add($redheadDuck);
+        $flockOfDucks->add($duckCall);
+        $flockOfDucks->add($rubberDuck);
+        $flockOfDucks->add($gooseDuck);
+
+
+        $flockOfMallards = new Flock();
+        $mallardDuck1 = $duckFactory->createMallardDuck();
+        $mallardDuck2 = $duckFactory->createMallardDuck();
+        $mallardDuck3 = $duckFactory->createMallardDuck();
+        $mallardDuck4 = $duckFactory->createMallardDuck();
+        $flockOfMallards->add($mallardDuck1);
+        $flockOfMallards->add($mallardDuck2);
+        $flockOfMallards->add($mallardDuck3);
+        $flockOfMallards->add($mallardDuck4);
+
+        $flockOfDucks->add($flockOfMallards);
+
+        echo "-- Whole flock simulation --\n";
+        $this->_simulate($flockOfDucks);
+
+        echo "-- Mallard flock simulation --\n";
+        $this->_simulate($flockOfMallards);
 
         echo "Duck quacked " . QuackCounter::getQuacks() . " times\n";
     }
