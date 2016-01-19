@@ -1,12 +1,11 @@
 <?php
 namespace Kondrat\DesignPatterns\CompoundPatterns\Duck;
 
-use Kondrat\DesignPatterns\CompoundPatterns\QuackableInterface;
-
-class DuckCall implements QuackableInterface
+class DuckCall extends AbstractDuck
 {
     public function quack()
     {
-        return "Kwak\n";
+        echo "Kwak\n";
+        $this->notifyObservers();
     }
 }

@@ -1,11 +1,11 @@
 <?php
 namespace Kondrat\DesignPatterns\CompoundPatterns;
 
-class Flock implements QuackableInterface
+class Flock implements QuackObservableInterface
 {
     private $quackers = [];
 
-    public function add(QuackableInterface $quacker)
+    public function add(QuackObservableInterface $quacker)
     {
         $this->quackers[] = $quacker;
     }
@@ -17,5 +17,19 @@ class Flock implements QuackableInterface
             $res .= $quacker->quack();
         }
         return $res;
+    }
+
+    public function registerObserver(ObserverInterface $o)
+    {
+        foreach($this->quackers as $quacker) {
+            $quacker->registerObserver($o);
+        }
+    }
+
+    public function notifyObservers()
+    {
+        foreach($this->quackers as $quacker) {
+            $quacker->notifyObservers();
+        }
     }
 }

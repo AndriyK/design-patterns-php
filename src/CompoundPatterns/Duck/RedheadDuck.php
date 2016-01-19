@@ -1,12 +1,12 @@
 <?php
 namespace Kondrat\DesignPatterns\CompoundPatterns\Duck;
 
-use Kondrat\DesignPatterns\CompoundPatterns\QuackableInterface;
-
-class RedheadDuck implements QuackableInterface
+class RedheadDuck extends AbstractDuck
 {
     public function quack()
     {
-        return "Quack\n";
+        echo "Quack\n";
+        $this->notifyObservers();
+
     }
 }
