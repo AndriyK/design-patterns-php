@@ -20,7 +20,7 @@ At the moment following patterns were implemented:
  10. Iterator
  11. State
  12. Proxy (not a book, just imagined one)
-  - CompoundPatterns example (several patterns works together)
+ 13. CompoundPatterns example (several patterns works together)
 
 So, after installation of package (with composer install) to web server document root, just hit needed pattern file,
 something like that:
